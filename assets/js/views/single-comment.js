@@ -2,6 +2,8 @@ var App = App || {};
 
 (function() {
     var Comment = Backbone.View.extend({
+        tagName: 'li',
+        className: 'media',
         events: {
             'click ': 'likeToggle',
             'click ': 'removeComment'

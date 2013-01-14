@@ -6,7 +6,7 @@ var App = App || {};
             '': 'home'
         },
         home: function() {
-            console.log('HOMEPAGE', arguments);
+            $('body').append( new App.Comments().render().el );
         }
     });
 
