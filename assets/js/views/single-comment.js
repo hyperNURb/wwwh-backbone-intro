@@ -18,7 +18,11 @@ var App = App || {};
 
         },
         render: function () {
-            this.$el.html(App.Templates.singleComment.render(this.model.toJSON()));
+            this.$el.html(App.Templates.singleComment.render(_.extend(this.model.toJSON(), {
+                time: function() {
+                    return moment(this.timestamp).format('Do MMM, YYYY [at] hh:mm a');
+                }
+            })));
 
             return this;
         }

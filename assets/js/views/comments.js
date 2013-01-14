@@ -5,13 +5,19 @@ var App = App || {};
         tagName: 'section',
         className: 'post',
         events: {
-            'keypress #comment': 'addComment'
+            'keypress #comment': 'addComment',
+            'click .comments-icon': 'focusNewComment'
         },
         initialize: function () {
             this.listenTo( this.collection, 'add', this.drawComment );
             this.listenTo( this.collection, 'add remove', this.commentsCount );
 
             this.render();
+        },
+        focusNewComment: function(e) {
+            e.preventDefault();
+
+            this.$('#comment').focus();
         },
         commentsCount: function () {
             var text;
@@ -45,7 +51,7 @@ var App = App || {};
                     model: model
                 });
 
-            commentInstance.render().$el.insertBefore( this.$('.comments .add-comment') );
+            commentInstance.render().$el.insertBefore( this.$('.add-comment') );
         },
         render: function () {
             this.$el.html(App.Templates.comments);
