@@ -1,0 +1,22 @@
+/*--------------------------------------
+ * FACEBOOK POST
+---------------------------------------*/
+
+.post {
+	position: relative;
+	background: #fff;
+	border: 1px solid #c5cde1;
+
+	&:before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		top: 1em;
+		left: -0.5em;
+		width: 1em;
+		height: 1em;
+		@include rotate(45deg);
+		background: #fff;
+		border: 1px solid #c5cde1;
+	}
+}

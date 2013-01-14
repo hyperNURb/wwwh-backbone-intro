@@ -1,0 +1,22 @@
+/*--------------------------------------
+ * VARIABLES
+---------------------------------------*/
+
+// Settings
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: false;
+$legacy-support-for-ie8: true;
+
+// Vertical Rhythm
+$base-font-size: 14px;
+$base-line-height: 21px;
+@include establish-baseline;
+
+// Sprites
+$icons: sprite-map("icons/*.png");
+$icons-layout: smart;
+
+// Colors
+$main-color: #049cdb;
+$gray-color: #999;
+$comp-color: complement($main-color);
