@@ -34,7 +34,8 @@ var App = App || {};
                     </ul>',
         SingleComment = Hogan.compile('<img src="assets/img/avatar.png" alt="">\
                                         <section class="text">\
-                                             <a href="#" class="title">{{user}}</a> {{text}}\
+                                            <a href="#" class="delete">delete</a>\
+                                            <a href="#" class="title">{{user}}</a> {{text}}\
                                             <footer>\
                                                 <time>{{timestamp}}</time> - <a href="#">Like</a>\
                                             </footer>\
