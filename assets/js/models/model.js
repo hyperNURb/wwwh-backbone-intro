@@ -5,7 +5,10 @@ var App = App || {};
         defaults: {
             timestamp: +(new Date()),
             liked: false,
-            text: ''
+            text: '',
+            user: 'Ivan Tatić',
+            avatar: 'ivan.jpg',
+            url: 'https://www.facebook.com/tatic.ivan'
         }
     });
 

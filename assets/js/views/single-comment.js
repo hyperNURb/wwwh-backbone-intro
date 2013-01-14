@@ -5,7 +5,7 @@ var App = App || {};
         tagName: 'li',
         className: 'media',
         events: {
-            'click ': 'likeToggle',
+            'click .like': 'likeToggle',
             'click .delete': 'removeComment'
         },
         initialize: function () {
