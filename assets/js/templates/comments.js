@@ -25,7 +25,7 @@ var App = App || {};
                                         <section class="text">\
                                              <a href="#" class="title">{{user}}</a> {{text}}\
                                             <footer>\
-                                                <time>{{time}}</time> - <a href="#">Like</a>\
+                                                <time>{{timestamp}}</time> - <a href="#">Like</a>\
                                             </footer>\
                                         </section>');
     App.Templates = {};

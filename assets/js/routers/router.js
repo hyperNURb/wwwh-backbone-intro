@@ -6,7 +6,11 @@ var App = App || {};
             '': 'home'
         },
         home: function() {
-            $('body').append( new App.Comments().render().el );
+            var Comments = new App.Comments({
+                        collection: new App.Collection()
+                    });
+
+            $('body').append( Comments.render().el );
         }
     });
 

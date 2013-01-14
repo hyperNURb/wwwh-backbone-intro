@@ -1,12 +1,8 @@
 var App = App || {};
 
 (function() {
-    var Comments = Backbone.Model.extend({
-        defaults: {
-            id: -1,
-            timestamp: 0,
-            text: ''
-        }
+    var Comments = Backbone.Collection.extend({
+        model: App.Model
     });
 
     App.Collection = Comments;

@@ -18,6 +18,8 @@ var App = App || {};
 
         },
         render: function () {
+            this.$el.html(App.Templates.singleComment.render(this.model.toJSON()));
+
             return this;
         }
     });
