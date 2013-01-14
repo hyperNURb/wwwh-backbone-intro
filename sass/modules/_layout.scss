@@ -23,3 +23,76 @@ a { text-decoration: none; }
 body {
 	background: #e7ebf2;
 }
+
+a {
+	color: #3a5998;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+%icon {
+	position: relative;
+	padding-left: 1.7em;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: -0.5em;
+	}
+}
+
+.like-icon {
+	@extend %icon;
+
+	&:before {
+		width: image-width('like.png');
+		height: image-height('like.png');
+		margin-top: -((image-height('like.png'))/2);
+		background: image-url('like.png');
+	}
+}
+
+.comments-icon {
+	@extend %icon;
+	margin-left: 0.3em;
+
+	&:before {
+		left: -0.2em;
+		width: image-width('comments.png');
+		height: image-height('comments.png');
+		margin-top: -((image-height('comments.png'))/2);
+		background: image-url('comments.png');
+	}
+}
+
+.media {
+	@extend %clearfix;
+
+	img {
+		display: block;
+		float: left;
+		max-width: 10%;
+	}
+
+	.title {
+		font-weight: bold;
+	}
+
+	time {
+		color: #808080;
+	}
+
+	.text {
+		float: right;
+		width: 90%;
+		padding-left: 0.1em;
+	}
+
+	footer {
+		display: block;
+	}
+}

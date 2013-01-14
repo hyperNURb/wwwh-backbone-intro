@@ -2,3 +2,13 @@
  * FORMS AND INPUTS
 ---------------------------------------*/
 
+input[type="text"] {
+	width: 100%;
+	padding: 0.2em;
+	border: 1px solid #bec7d9;
+
+	&:focus {
+		outline: none;
+		border: 1px solid darken(#bec7d9, 10%);
+	}
+}
