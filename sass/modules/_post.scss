@@ -63,6 +63,27 @@
 			padding: 0.3em 0.3em 0.3em 1.2em;
 			background: #edeff4;
 			margin-top: 0.1em;
+			position: relative;
+		}
+
+		.delete {
+			@extend %hide-text;
+			display: block;
+			width: image-width('delete.png');
+			height: image-height('delete.png');
+			position: absolute;
+			top: 0.5em;
+			right: 0.5em;
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: image-width('delete.png');
+				height: image-height('delete.png');
+				background: image-url('delete.png');
+			}
 		}
 	}
 
