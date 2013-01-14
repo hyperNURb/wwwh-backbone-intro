@@ -15,6 +15,17 @@ var App = App || {};
                     </section>\
                     <ul class="comments">\
                         <li class="media">\
+                            <ul class="actions">\
+                                <li><a href="#">Like</a></li>\
+                                <li><a href="#">Comment</a></li>\
+                                <li><a href="#">Share</a></li>\
+                            </ul>\
+                            <section class="icons">\
+                                <a href="#" class="like-icon">Like</a>\
+                                <a href="#" class="comments-icon">Add comment</a>\
+                            </section>\
+                        </li>\
+                        <li class="add-comment media">\
                             <img src="assets/img/avatar.png" alt="">\
                             <section class="text">\
                                 <input type="text" name="comment" id="comment" placeholder="Write a comment">\
