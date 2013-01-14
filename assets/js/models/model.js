@@ -5,6 +5,7 @@ var App = App || {};
         defaults: {
             id: -1,
             timestamp: +(new Date()),
+            liked: false,
             text: ''
         }
     });
