@@ -11,8 +11,12 @@ var App = App || {};
         initialize: function () {
             this.listenTo( this.collection, 'add', this.drawComment );
             this.listenTo( this.collection, 'add remove', this.commentsCount );
+            this.listenTo( this.collection, 'change:liked', this.likesCount );
 
             this.render();
+        },
+        likesCount: function () {
+            this.$('.like-icon').text( this.collection.getLikes() );
         },
         focusNewComment: function(e) {
             e.preventDefault();

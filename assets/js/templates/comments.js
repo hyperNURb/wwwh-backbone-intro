@@ -21,7 +21,7 @@ var App = App || {};
                                 <li><a href="#">Share</a></li>\
                             </ul>\
                             <section class="icons">\
-                                <a href="#" class="like-icon">Like</a>\
+                                <a href="#" class="hidden like-icon"></a>\
                                 <a href="#" class="comments-icon">Add comment</a>\
                             </section>\
                         </li>\
@@ -37,7 +37,7 @@ var App = App || {};
                                             <a href="#" class="delete">delete</a>\
                                             <a href="#" class="title">{{user}}</a> {{text}}\
                                             <footer>\
-                                                <time>{{time}}</time> - <a href="#">Like</a>\
+                                                <time>{{time}}</time> - <a href="#" class="like">Like</a>\
                                             </footer>\
                                         </section>');
     App.Templates = {};

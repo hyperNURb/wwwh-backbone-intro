@@ -6,16 +6,23 @@ var App = App || {};
         className: 'media',
         events: {
             'click ': 'likeToggle',
-            'click ': 'removeComment'
+            'click .delete': 'removeComment'
         },
         initialize: function () {
 
         },
         likeToggle: function (e) {
-            this.model.set('liked', true);
+            e.preventDefault();
+            var liked = this.model.get('liked');
+
+            this.model.set('liked', !liked);
+            this.$('.like').text( !liked ? 'Unlike' : 'Like');
         },
         removeComment: function (e) {
+            e.preventDefault();
 
+            this.model.destroy();
+            this.remove();
         },
         render: function () {
             this.$el.html(App.Templates.singleComment.render(_.extend(this.model.toJSON(), {
